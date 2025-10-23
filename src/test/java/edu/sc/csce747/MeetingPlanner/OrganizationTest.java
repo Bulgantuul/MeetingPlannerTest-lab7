@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class OrganizationTest {
 
     @Test
-    public void testGetEmployees() throws Exception {  // declare throws
+    public void testGetEmployees() throws Exception {
         Organization org = new Organization();
         ArrayList<Person> employees = org.getEmployees();
 
@@ -22,7 +22,7 @@ public class OrganizationTest {
     }
 
     @Test
-    public void testGetRooms() throws Exception {  // declare throws
+    public void testGetRooms() throws Exception {
         Organization org = new Organization();
         ArrayList<Room> rooms = org.getRooms();
 

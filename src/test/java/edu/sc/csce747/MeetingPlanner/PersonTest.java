@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class PersonTest {
 
-    @Test
+    @BeforeEach
     public void testPersonAddMeeting_noConflict() {
         Person person = new Person("Alice");
         Room room = new Room("R201");

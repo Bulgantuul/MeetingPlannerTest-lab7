@@ -22,7 +22,7 @@ public class CalendarTest {
             calendar.addMeeting(m1);
 
             Meeting m2 = new Meeting(5, 10, 11, 13, null, new Room(), "Meeting2");
-            calendar.addMeeting(m2);  // Should throw exception
+            calendar.addMeeting(m2);
         });
     }
 
