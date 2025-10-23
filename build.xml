@@ -1,0 +1,31 @@
+<project name="MeetingPlanner" default="test">
+
+    <property name="src" value="src" />
+    <property name="test" value="test" />
+    <property name="build" value="build" />
+
+    <target name="compile">
+        <mkdir dir="${build}" />
+        <javac srcdir="${src}" destdir="${build}" includeantruntime="false" />
+    </target>
+
+    <target name="test" depends="compile">
+        <mkdir dir="test-output" />
+        <junit printsummary="yes" haltonfailure="yes">
+            <classpath>
+                <pathelement path="${build}" />
+                <pathelement path="libs/junit-platform-console-standalone-1.10.0.jar" />
+            </classpath>
+            <batchtest fork="true" todir="test-output">
+                <fileset dir="${test}">
+                    <include name="**/*Test.java" />
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="javadoc">
+        <javadoc sourcepath="${src}" destdir="docs" />
+    </target>
+
+</project>
